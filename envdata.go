@@ -1,4 +1,4 @@
-package github.com/didier13150/gitlablib
+package gitlablib
 
 // type GitlabEnvDataNamespace struct {
 //	Id int `json:"id"`

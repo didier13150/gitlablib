@@ -1,4 +1,4 @@
-module github.com/didier13150/gitlablib
+module gitlablib
 
 go 1.21.0
 

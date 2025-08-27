@@ -1,4 +1,4 @@
-package github.com/didier13150/gitlablib
+package gitlablib
 
 import (
 	"testing"
