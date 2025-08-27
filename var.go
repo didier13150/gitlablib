@@ -62,11 +62,11 @@ func (glvar *GitlabVar) ExportVars(filename string) {
 		log.Println(err)
 		return
 	}
-	writeFile(filename, json, glvar.Verbose)
+	WriteFile(filename, json, glvar.Verbose)
 }
 
 func (glvar *GitlabVar) ImportVars(filename string) {
-	resp := readFromFile(filename, "vars", glvar.Verbose)
+	resp := ReadFromFile(filename, "vars", glvar.Verbose)
 	err := json.Unmarshal([]byte(resp), &glvar.FileData)
 	if err != nil {
 		log.Println("Importing var json", err)

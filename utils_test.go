@@ -14,7 +14,7 @@ func TestUtilsReadFile(t *testing.T) {
 	if err != nil {
 		t.Errorf(`TestUtilsReadFile(write test file) = %s`, err)
 	}
-	content := readFromFile(filename, "test", false)
+	content := ReadFromFile(filename, "test", false)
 	if content != strings.TrimSpace(expected) {
 		t.Errorf(`TestUtilsReadFile(read test file) = %s`, err)
 	}
@@ -29,7 +29,7 @@ func TestUtilsWriteFile(t *testing.T) {
 	expected := "  \nline 1\nline 2\nline 3\n "
 	filename := "/tmp/glcli-readfile.txt"
 
-	writeFile(filename, []byte(expected), false)
+	WriteFile(filename, []byte(expected), false)
 
 	content, err := os.ReadFile(filename)
 	if string(content) != expected {

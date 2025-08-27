@@ -71,11 +71,11 @@ func (glproj *GitlabProject) ExportProjects(filename string) {
 		log.Println(err)
 		return
 	}
-	writeFile(filename, json, glproj.Verbose)
+	WriteFile(filename, json, glproj.Verbose)
 }
 
 func (glproj *GitlabProject) ImportProjects(filename string) {
-	resp := readFromFile(filename, "projects", glproj.Verbose)
+	resp := ReadFromFile(filename, "projects", glproj.Verbose)
 	err := json.Unmarshal([]byte(resp), &glproj.Data)
 	if err != nil {
 		log.Println("Importing projects json", err)

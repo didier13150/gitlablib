@@ -8,7 +8,7 @@ import (
 	"gopkg.in/ini.v1"
 )
 
-func readFromFile(filename string, kind string, verbose bool) string {
+func ReadFromFile(filename string, kind string, verbose bool) string {
 	if verbose {
 		if len(kind) > 0 {
 			log.Printf("Try to read %s from %s file", kind, filename)
@@ -28,7 +28,7 @@ func readFromFile(filename string, kind string, verbose bool) string {
 	return strings.TrimSpace(string(content))
 }
 
-func writeFile(filename string, json []byte, verbose bool) {
+func WriteFile(filename string, json []byte, verbose bool) {
 	if verbose {
 		log.Printf("Try to write %s file", filename)
 	}
@@ -39,7 +39,7 @@ func writeFile(filename string, json []byte, verbose bool) {
 	}
 }
 
-func getGitUrl(remoteName string, verbose bool) string {
+func GetGitUrl(remoteName string, verbose bool) string {
 	inidata, err := ini.Load(".git/config")
 	if err != nil {
 		log.Fatalf("Fail to read file: %v", err)

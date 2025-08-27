@@ -62,11 +62,11 @@ func (glenv *GitlabEnv) ExportEnvs(filename string) {
 		log.Println(err)
 		return
 	}
-	writeFile(filename, json, glenv.Verbose)
+	WriteFile(filename, json, glenv.Verbose)
 }
 
 func (glenv *GitlabEnv) ImportEnvs(filename string) {
-	resp := readFromFile(filename, "envs", glenv.Verbose)
+	resp := ReadFromFile(filename, "envs", glenv.Verbose)
 	err := json.Unmarshal([]byte(resp), &glenv.FileData)
 	if err != nil {
 		log.Println("Importing env json", err)
