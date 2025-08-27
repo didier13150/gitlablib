@@ -1,4 +1,4 @@
-package gitlabcli
+package github.com/didier13150/gitlabcli
 
 type GitlabVarData struct {
 	Key         string `json:"key"`

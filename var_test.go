@@ -1,4 +1,4 @@
-package gitlabcli
+package github.com/didier13150/gitlabcli
 
 import (
 	"net/http"

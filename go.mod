@@ -1,4 +1,4 @@
-module gitlabcli
+module github.com/didier13150/gitlabcli
 
 go 1.21.0
 
