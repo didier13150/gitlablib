@@ -14,6 +14,5 @@ test-src:
   before_script:
     - go install github.com/didier13150/glsimulator@latest
   script:
-    - $HOME/go/bin/glsimulator &
+    - /go/bin/glsimulator &
     - go test
-    - killall glsimulator
